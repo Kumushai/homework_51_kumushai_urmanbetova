@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stats</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+
+<div class="container">
+    <div class="left-div"><img src="{% static img %}" alt=""></div>
+    <div class="right-div">
+        <h3>Кот: {{ name }} </h3>
+        <h3>Возраст: {{ age }} </h3>
+        <h3>Уровень счастья: {{ happiness }} </h3>
+        <h3>Уровень сытости: {{ satiety }} </h3>
+    </div>
+
+</div>
+<form action="" method="post" class="container">
+    {% csrf_token %}
+    <div class="form-group">
+        <select name="action" id="" class="action-form">
+            <option value="play">поиграть с котом</option>
+            <option value="feed">покормить кота</option>
+            <option value="sleep">уложить спать кота</option>
+        </select>
+    <input type="submit" value="Подтвердить" class="stats-button"> </div>
+
+
+</form>
+
+
+
+
+{#<a href="articles/add/">Create article</a>#}
+<br>
+{#{% for info in cat_info %}#}
+{#    <div>#}
+{#        <h5>{{ info.cat_name }}</h5>#}
+{#        <p>{{ article.content }}</p>#}
+{#        <p>{{ article.author }}</p>#}
+{#    </div>#}
+{#{% endfor %}#}
+
+
+
+{#{{ articles.1 }}#}
+</body>
+</html>

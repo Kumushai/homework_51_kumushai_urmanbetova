@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+<div class="main-page">
+    <h1 class="main-title">Вас приветствует симулятор кота! <br> Для начала введите имя кота</h1></div>
+<div class="name-form">
+<form action="" method="post">
+    {% csrf_token %}
+
+    <input type="text" name="catname" placeholder="введите имя кота" size="40" class="name-form"/><br>
+    <br>
+    <input type="submit" value="создать" class="main-button"/>
+</form>
+</div>
+</body>
+</html>
